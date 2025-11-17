@@ -1,0 +1,19 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Datos pesados
+data/raw/
+data/interim/
+data/processed/
+data/external/
+
+# MLflow
+mlflow/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
