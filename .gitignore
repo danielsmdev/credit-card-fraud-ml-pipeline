@@ -1,14 +1,17 @@
 # Entorno virtual
 .venv/
-venv/
 
-# Datos pesados
+# Datos
 data/raw/
 data/interim/
 data/processed/
 data/external/
 
-# MLflow
+# Modelos y artefactos
+models/trained/
+models/artifacts/
+
+# MLflow tracking
 mlflow/
 
 # Python cache
