@@ -5,29 +5,29 @@
 ## 🧩 Overview / Resumen
 
 This repository contains a **production-oriented, end-to-end machine
-learning pipeline** for detecting credit card fraud.\
+learning pipeline** for detecting credit card fraud.
 It includes: 
 
-- Data ingestion\
-- Preprocessing & feature engineering\
-- Model training with MLflow\
-- Experiment tracking\
-- Serialized model for inference\
-- REST API using FastAPI\
+- Data ingestion
+- Preprocessing & feature engineering
+- Model training with MLflow
+- Experiment tracking
+- Serialized model for inference
+- REST API using FastAPI
 - Evaluation dashboard using Streamlit
 
 Este repositorio contiene un **pipeline de machine learning completo
 orientado a producción** para detectar fraude en transacciones de
-tarjeta.\
+tarjeta.
 
 Incluye: 
 
-- Ingesta de datos\
-- Preprocesado y feature engineering\
-- Entrenamiento de modelos con MLflow\
-- Registro de experimentos\
-- Modelo serializado para inferencia\
-- API REST con FastAPI\
+- Ingesta de datos
+- Preprocesado y feature engineering
+- Entrenamiento de modelos con MLflow
+- Registro de experimentos
+- Modelo serializado para inferencia
+- API REST con FastAPI
 - Dashboard de evaluación en Streamlit
 
 ## 📁 Project Structure / Estructura del Proyecto
@@ -63,12 +63,12 @@ credit-card-fraud-ml-pipeline/
 
 ## ⚙️ Tech Stack / Tecnologías
 
--   Python 3.11\
--   pandas, numpy, scikit-learn\
--   MLflow\
--   FastAPI + Uvicorn\
--   Streamlit\
--   matplotlib\
+-   Python 3.11
+-   pandas, numpy, scikit-learn
+-   MLflow
+-   FastAPI + Uvicorn
+-   Streamlit
+-   matplotlib
 -   joblib
 
 ## 🚀 Setup (EN)
@@ -107,16 +107,16 @@ Place as:
 
   Metric      Train           Test
   ----------- --------------- ----------
-  AUC ROC     \~1.00          \~0.95
+  AUC ROC     ~1.00           ~0.95
   Precision   High            High
   Recall      Moderate-High   Moderate
   F1          Strong          Strong
 
 ## 🧪 MLflow Tracking
 
--   Run history\
--   Metrics\
--   Hyperparameters\
+-   Run history
+-   Metrics
+-   Hyperparameters
 -   Artifacts
 
 ## 🌐 API Example / Ejemplo de API
@@ -129,24 +129,24 @@ Request:
 
 ## 📈 Dashboard Features
 
--   Class distribution\
--   Key metrics\
--   Confusion matrix\
--   ROC curve\
+-   Class distribution
+-   Key metrics
+-   Confusion matrix
+-   ROC curve
 -   Data sample
 
 ## 🔮 Roadmap
 
--   XGBoost, LightGBM\
--   Threshold optimization\
--   Cost-based evaluation\
--   Drift detection\
--   Dockerization\
+-   XGBoost, LightGBM
+-   Threshold optimization
+-   Cost-based evaluation
+-   Drift detection
+-   Dockerization
 -   CI/CD
 
 ## 📌 Author
 
-**Daniel Sánchez**\
+**Daniel Sánchez**
 
 GitHub: https://github.com/danielsmdev
 
