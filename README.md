@@ -1,234 +1,146 @@
-Credit Card Fraud Detection – End-to-End ML Pipeline
-🔄 English & Spanish Documentation (Bilingual)
-🧩 Overview / Resumen
+# Credit Card Fraud Detection -- End-to-End ML Pipeline
 
-This repository contains a production-oriented, end-to-end machine learning pipeline for detecting credit card fraud.
-It includes:
+### 🔄 English & Spanish Documentation (Bilingual)
 
-Data ingestion
+## 🧩 Overview / Resumen
 
-Preprocessing & feature engineering
+This repository contains a **production-oriented, end-to-end machine
+learning pipeline** for detecting credit card fraud.\
+It includes: - Data ingestion\
+- Preprocessing & feature engineering\
+- Model training with MLflow\
+- Experiment tracking\
+- Serialized model for inference\
+- REST API using FastAPI\
+- Evaluation dashboard using Streamlit
 
-Model training with MLflow
+Este repositorio contiene un **pipeline de machine learning completo
+orientado a producción** para detectar fraude en transacciones de
+tarjeta.\
+Incluye: - Ingesta de datos\
+- Preprocesado y feature engineering\
+- Entrenamiento de modelos con MLflow\
+- Registro de experimentos\
+- Modelo serializado para inferencia\
+- API REST con FastAPI\
+- Dashboard de evaluación en Streamlit
 
-Experiment tracking
+## 📁 Project Structure / Estructura del Proyecto
 
-Serialized model for inference
-
-REST API using FastAPI
-
-Evaluation dashboard using Streamlit
-
-Este repositorio contiene un pipeline de machine learning completo orientado a producción para detectar fraude en transacciones de tarjeta.
-Incluye:
-
-Ingesta de datos
-
-Preprocesado y feature engineering
-
-Entrenamiento de modelos con MLflow
-
-Registro de experimentos
-
-Modelo serializado para inferencia
-
-API REST con FastAPI
-
-Dashboard de evaluación en Streamlit
-
-📁 Project Structure / Estructura del Proyecto
+``` bash
 credit-card-fraud-ml-pipeline/
 │
 ├── data/
-│   ├── raw/          # Raw dataset (ignored by Git)
+│   ├── raw/
 │   ├── interim/
-│   └── processed/    # Train/test after preprocessing
+│   └── processed/
 │
 ├── models/
-│   ├── trained/      # Serialized models (ignored)
-│   └── artifacts/    # Scalers, transformers (ignored)
+│   ├── trained/
+│   └── artifacts/
 │
 ├── src/
-│   ├── config/       # Global paths & settings
-│   ├── ingestion/    # Raw data ingestion
-│   ├── preprocessing # Feature engineering
-│   ├── training/     # ML training with MLflow
-│   ├── inference/    # Prediction utilities
-│   └── utils/        # I/O and helpers
+│   ├── config/
+│   ├── ingestion/
+│   ├── preprocessing
+│   ├── training/
+│   ├── inference/
+│   └── utils/
 │
-├── api/              # FastAPI for inference
-├── dashboard/        # Streamlit dashboard
-├── mlflow/           # Local MLflow experiment store (ignored)
+├── api/
+├── dashboard/
+├── mlflow/
 │
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+```
 
-⚙️ Tech Stack / Tecnologías
+## ⚙️ Tech Stack / Tecnologías
 
-Python 3.11
+-   Python 3.11\
+-   pandas, numpy, scikit-learn\
+-   MLflow\
+-   FastAPI + Uvicorn\
+-   Streamlit\
+-   matplotlib\
+-   joblib
 
-pandas, numpy, scikit-learn
+## 🚀 Setup (EN)
 
-MLflow (experiment tracking)
+### 1️⃣ Create virtual environment
 
-FastAPI + Uvicorn
+    python -m venv .venv
+    .\.venv\Scripts\activate
+    pip install -r requirements.txt
 
-Streamlit
+### 2️⃣ Add dataset
 
-matplotlib
+Place as:
 
-joblib
+    creditcard.csv
 
-🚀 Setup (EN)
-1️⃣ Create virtual environment
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r requirements.txt
+### 3️⃣ Run pipeline
 
-2️⃣ Add dataset
+    python -m src.ingestion.make_dataset
+    python -m src.preprocessing.build_features
+    python -m src.training.train_model
 
-Download the public “Credit Card Fraud Detection” dataset and place it at:
+### 4️⃣ MLflow UI
 
-creditcard.csv
+    mlflow ui --backend-store-uri mlflow
 
+### 5️⃣ API
 
-(do NOT add it to Git)
+    uvicorn api.main:app --reload
 
-3️⃣ Run end-to-end pipeline
-Ingestion
-python -m src.ingestion.make_dataset
+### 6️⃣ Dashboard
 
-Preprocessing
-python -m src.preprocessing.build_features
+    streamlit run dashboard/app.py
 
-Training (MLflow)
-python -m src.training.train_model
+## 📊 Model Performance / Rendimiento del Modelo
 
-Start MLflow UI
-mlflow ui --backend-store-uri mlflow
+  Metric      Train           Test
+  ----------- --------------- ----------
+  AUC ROC     \~1.00          \~0.95
+  Precision   High            High
+  Recall      Moderate-High   Moderate
+  F1          Strong          Strong
 
+## 🧪 MLflow Tracking
 
-Visit → http://127.0.0.1:5000
+-   Run history\
+-   Metrics\
+-   Hyperparameters\
+-   Artifacts
 
-4️⃣ API (FastAPI)
-uvicorn api.main:app --reload
+## 🌐 API Example / Ejemplo de API
 
+Request:
 
-Open → http://127.0.0.1:8000/docs
+``` json
+{"Time":0,"V1":-1.3,"V2":-0.07,"Amount":149.62}
+```
 
-5️⃣ Dashboard (Streamlit)
-streamlit run dashboard/app.py
+## 📈 Dashboard Features
 
-🚀 Puesta en marcha (ES)
-1️⃣ Crear entorno virtual
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r requirements.txt
+-   Class distribution\
+-   Key metrics\
+-   Confusion matrix\
+-   ROC curve\
+-   Data sample
 
-2️⃣ Añadir dataset
+## 🔮 Roadmap
 
-Descarga el dataset público de fraude y colócalo como:
+-   XGBoost, LightGBM\
+-   Threshold optimization\
+-   Cost-based evaluation\
+-   Drift detection\
+-   Dockerization\
+-   CI/CD
 
-creditcard.csv
+## 📌 Author
 
-
-(no lo subas a GitHub)
-
-3️⃣ Ejecutar el pipeline completo
-Ingesta
-python -m src.ingestion.make_dataset
-
-Preprocesado
-python -m src.preprocessing.build_features
-
-Entrenamiento (MLflow)
-python -m src.training.train_model
-
-Ver experimentos en MLflow
-mlflow ui --backend-store-uri mlflow
-
-4️⃣ API (FastAPI)
-uvicorn api.main:app --reload
-
-
-Ir a → http://127.0.0.1:8000/docs
-
-5️⃣ Dashboard (Streamlit)
-streamlit run dashboard/app.py
-
-📊 Model Performance / Rendimiento del Modelo
-
-Typical performance with the baseline Random Forest:
-
-Metric	Train	Test
-AUC ROC	~1.00	~0.95
-Precision	High	High
-Recall	Moderate-High	Moderate
-F1	Strong	Strong
-🧪 MLflow Tracking
-
-Full run history
-
-Hyperparameters
-
-Metrics
-
-Artifacts (models, scalers)
-
-Comparison between runs
-
-Esto demuestra flujo realista de trabajo como en una consultora.
-
-🌐 API Example / Ejemplo de API
-Request
-{
-  "Time": 0,
-  "V1": -1.3598,
-  "V2": -0.0727,
-  ...
-  "Amount": 149.62
-}
-
-Response
-{
-  "fraud_probability": 0.0123,
-  "is_fraud": 0
-}
-
-📈 Dashboard Features / Funcionalidades del Dashboard
-
-Class distribution
-
-Key metrics
-
-Confusion matrix
-
-ROC curve
-
-Sample of processed data
-
-Es perfecto para enseñar el proyecto en una demo o entrevista.
-
-🔮 Next Steps / Siguientes Pasos (Roadmap)
-
-Planned enhancements / Mejoras previstas:
-
-Add XGBoost, LightGBM, CatBoost models
-
-Threshold optimization (precision-recall tradeoff)
-
-Cost-based evaluation (business impact)
-
-Drift detection (future extension)
-
-Dockerization (API + dashboard)
-
-CI/CD with GitHub Actions
-
-📌 Author / Autor
-
-Daniel Sánchez – Data Science / ML Engineer
+**Daniel Sánchez**\
 GitHub: https://github.com/danielsmdev
-
 LinkedIn: https://www.linkedin.com/in/daniel-sanchez-datascience/
