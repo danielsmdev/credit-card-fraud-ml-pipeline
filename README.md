@@ -6,7 +6,9 @@
 
 This repository contains a **production-oriented, end-to-end machine
 learning pipeline** for detecting credit card fraud.\
-It includes: - Data ingestion\
+It includes: 
+
+- Data ingestion\
 - Preprocessing & feature engineering\
 - Model training with MLflow\
 - Experiment tracking\
@@ -17,7 +19,10 @@ It includes: - Data ingestion\
 Este repositorio contiene un **pipeline de machine learning completo
 orientado a producción** para detectar fraude en transacciones de
 tarjeta.\
-Incluye: - Ingesta de datos\
+
+Incluye: 
+
+- Ingesta de datos\
 - Preprocesado y feature engineering\
 - Entrenamiento de modelos con MLflow\
 - Registro de experimentos\
@@ -142,5 +147,7 @@ Request:
 ## 📌 Author
 
 **Daniel Sánchez**\
+
 GitHub: https://github.com/danielsmdev
+
 LinkedIn: https://www.linkedin.com/in/daniel-sanchez-datascience/
