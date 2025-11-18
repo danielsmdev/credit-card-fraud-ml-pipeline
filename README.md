@@ -105,12 +105,12 @@ Place as:
 
 ## 📊 Model Performance / Rendimiento del Modelo
 
-  Metric      Train           Test
-  ----------- --------------- ----------
-  AUC ROC     ~1.00           ~0.95
-  Precision   High            High
-  Recall      Moderate-High   Moderate
-  F1          Strong          Strong
+  |Metric      | Train          | Test
+  |----------- |--------------- | ----------
+  |AUC ROC     |~1.00           |~0.95
+  |Precision   |High            |High
+  |Recall      |Moderate-High   |Moderate
+  |F1          |Strong          |Strong
 
 ## 🧪 MLflow Tracking
 
