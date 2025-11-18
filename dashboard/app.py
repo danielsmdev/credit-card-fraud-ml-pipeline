@@ -21,7 +21,6 @@ from src.utils.io_utils import load_csv
 import joblib
 
 
-
 TARGET_COL = "Class"
 
 
